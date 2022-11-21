@@ -11,4 +11,6 @@ import java.util.List;
 public interface Student_CourseRepository extends JpaRepository<Course_Student, Long> {
 
     public List<Course_Student> getStudentById(Long course_id);
+
+   // public Course_Student getsStudentById(Long course_id);
 }

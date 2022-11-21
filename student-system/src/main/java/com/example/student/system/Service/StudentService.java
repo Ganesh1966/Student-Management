@@ -49,4 +49,15 @@ public class StudentService {
         }
         return st;
     }
+
+    public Student updateStudentRecord(Student updatedStudent) {
+        return studentRepository.save(updatedStudent);
+
+    }
+    public void LeaveCourseById(Long course_id){
+
+        List<Course_Student> course_student= student_courseRepository.getStudentById(course_id);
+        student_courseRepository.delete(course_student);
+
+    }
 }
