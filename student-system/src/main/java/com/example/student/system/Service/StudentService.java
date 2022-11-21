@@ -54,9 +54,9 @@ public class StudentService {
         return studentRepository.save(updatedStudent);
 
     }
-    public void LeaveCourseById(Long course_id){
+    public void LeaveCourseById(Long student_id,Long course_id){
 
-        List<Course_Student> course_student= student_courseRepository.getStudentById(course_id);
+        Course_Student course_student= student_courseRepository.getCourse_StudentBy(student_id,course_id);
         student_courseRepository.delete(course_student);
 
     }

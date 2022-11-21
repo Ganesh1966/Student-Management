@@ -71,11 +71,11 @@ public class StudentController {
         }
     }
 
-    @DeleteMapping("/course/id")
-    public HttpStatus deletecourse(@PathVariable long id) {
+    @DeleteMapping("/course/id/st_id")
+    public HttpStatus deletecourse(@PathVariable long id,@PathVariable long st_id) {
 
         try {
-            studentService.LeaveCourseById(id);
+            studentService.LeaveCourseById(id,st_id);
             return HttpStatus.OK;
         }
         catch (Exception e) {
